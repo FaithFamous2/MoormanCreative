@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a creative portfolio with elegant, interactive scrolling and a dynamic video hero section to engage visitors and highlight brand identity.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

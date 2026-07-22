@@ -26,13 +26,35 @@ function Hero() {
     <section ref={ref} className="relative w-full overflow-hidden" style={{ height: '100svh' }}>
       <motion.div className="absolute inset-0 origin-center" style={{ y: bgY, scale: bgScale }}>
         <div className="absolute inset-0" style={{ backgroundColor: '#060606' }} />
+        <motion.video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          disablePictureInPicture
+          poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1400&q=75&auto=format&fit=crop"
+          aria-hidden="true"
+          tabIndex={-1}
+          onCanPlay={(event) => {
+            event.currentTarget.play().catch(() => undefined)
+          }}
+          className="elegant-hero-video absolute inset-0 h-full w-full object-cover"
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <source src="https://videos.pexels.com/video-files/29816822/12808277_1080_1920_30fps.mp4" type="video/mp4" />
+        </motion.video>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(6,6,6,0.5) 0%, rgba(6,6,6,0.18) 44%, rgba(6,6,6,0.62) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 62% 46% at 50% 50%, transparent 20%, rgba(6,6,6,0.62) 100%)' }} />
         <div className="absolute inset-0 pointer-events-none" style={{
           opacity: 0.055,
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")`,
           backgroundSize: '300px 300px',
         }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 45% at 50% -5%, rgba(244,241,234,0.05) 0%, transparent 70%)' }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 35% at 15% 105%, rgba(244,241,234,0.025) 0%, transparent 65%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 45% at 50% -5%, rgba(244,241,234,0.06) 0%, transparent 70%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 35% at 15% 105%, rgba(244,241,234,0.03) 0%, transparent 65%)' }} />
         <motion.div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 90% 70% at 50% 50%, rgba(244,241,234,0.018) 0%, transparent 65%)' }}
           animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} />
       </motion.div>

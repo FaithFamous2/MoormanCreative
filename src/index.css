@@ -22,6 +22,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.elegant-hero-video {
+  background: #060606;
+  filter: grayscale(1) brightness(0.5) contrast(1.16);
+}
+
 button,
 a,
 input {
@@ -521,6 +526,10 @@ a {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .elegant-hero-video {
+    display: none;
   }
 
   *,

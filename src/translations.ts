@@ -92,7 +92,7 @@ export const t = {
       team: {
         label: 'THE TEAM',
         members: [
-          { name: 'Joren Moorman', role: 'Founder & Creative Director', bio: 'Former senior director at Framestore. 12 years of cinematic production across Europe and the US.' },
+          { name: 'Laurent Moorman', role: 'Founder & Creative Director', bio: 'Former senior director at Framestore. 12 years of cinematic production across Europe and the US.' },
         ],
       },
     },
@@ -238,7 +238,7 @@ export const t = {
       team: {
         label: 'HET TEAM',
         members: [
-          { name: 'Joren Moorman', role: 'Oprichter & Creatief Directeur', bio: 'Voormalig senior directeur bij Framestore. 12 jaar cinematografische productie door Europa en de VS.' },
+          { name: 'Laurent Moorman', role: 'Oprichter & Creatief Directeur', bio: 'Voormalig senior directeur bij Framestore. 12 jaar cinematografische productie door Europa en de VS.' },
         ],
       },
     },

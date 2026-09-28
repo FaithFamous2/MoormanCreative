@@ -5,6 +5,9 @@ node_modules/
 dist/
 dist-ssr/
 
+# Original production archives (web-ready selections live in public/projects)
+/asset/
+
 # Local environment files
 .env
 .env.*
@@ -26,4 +29,3 @@ pnpm-debug.log*
 # Vite and TypeScript caches
 .vite/
 *.tsbuildinfo
-

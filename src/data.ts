@@ -6,6 +6,8 @@ export interface Project {
   year: string
   category: { en: string; nl: string }
   image: string
+  video?: string
+  videos?: string[]
   images: string[]
   challenge: { en: string; nl: string }
   solution: { en: string; nl: string }
@@ -23,7 +25,7 @@ export interface Service {
   includes: { en: string; nl: string }[]
 }
 
-export const PROJECTS: Project[] = [
+const PLACEHOLDER_PROJECTS: Project[] = [
   {
     id: 'velocity',
     title: 'Velocity',
@@ -207,6 +209,117 @@ export const PROJECTS: Project[] = [
       nl: 'We gebruikten AI-restauratie en -generatie om archiefsscènes te herbouwen, stilstaande beelden te animeren en contextuele omgevingen te creëren uit historische fotografie. Het resultaat was 4 uur documentaire die aanvoelde alsof hij altijd al had bestaan.',
     },
     techStack: ['AI SYSTEM: RESTORATION + GENERATION PIPELINE', 'ARCHIVAL: 35MM SCAN', 'COMPOSITING: NUKE', 'GRADE: BASELIGHT', 'DELIVERY: 4K HDR + SDR'],
+  },
+]
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'catwalk', title: 'The Catwalk', year: '2026',
+    subtitle: { en: 'AI FASHION FILM', nl: 'AI-MODEFILM' },
+    tags: { en: 'CONCEPT & ANIMATION', nl: 'CONCEPT & ANIMATIE' },
+    category: { en: 'Fashion', nl: 'Mode' },
+    image: '/projects/catwalk.jpg', video: '/projects/catwalk.mp4',
+    videos: ['/projects/catwalk.mp4', '/projects/catwalk-02.mp4', '/projects/catwalk-03.mp4'],
+    images: ['/projects/catwalk.jpg', '/projects/catwalk-02.jpg', '/projects/catwalk-03.jpg'],
+    challenge: {
+      en: 'Create an editorial-grade fashion campaign with the presence, movement, and attitude of a real runway production—without the scale and cost of a traditional shoot.',
+      nl: 'Een modecampagne van redactioneel niveau creëren met de uitstraling, beweging en attitude van een echte catwalkproductie—zonder de schaal en kosten van een traditionele shoot.',
+    },
+    solution: {
+      en: 'A hyper-realistic model and visual concept were created in Nano Banana 2, then animated with Seedance 2.0 to achieve fluid runway movement and a cinematic high-fashion finish.',
+      nl: 'Een hyperrealistisch model en visueel concept werden gemaakt in Nano Banana 2 en vervolgens geanimeerd met Seedance 2.0 voor vloeiende catwalkbewegingen en een cinematografische high-fashion afwerking.',
+    },
+    techStack: ['MODEL & CONCEPT: NANO BANANA 2', 'ANIMATION: SEEDANCE 2.0', 'FORMAT: DIGITAL CAMPAIGN', 'DIRECTION: MOORMAN CREATIVE'],
+  },
+  {
+    id: 'floreros', title: 'Floreros', year: '2026',
+    subtitle: { en: 'PRODUCT SHOWCASE FILM', nl: 'PRODUCTSHOWCASEFILM' },
+    tags: { en: 'AI VISUALS & MOTION', nl: 'AI-BEELD & MOTION' },
+    category: { en: 'Product Film', nl: 'Productfilm' },
+    image: '/projects/floreros.jpg', video: '/projects/floreros.mp4',
+    videos: ['/projects/floreros.mp4', '/projects/floreros-02.mp4', '/projects/floreros-03.mp4'],
+    images: ['/projects/floreros.jpg'],
+    challenge: {
+      en: 'Translate Floreros’ distinctive vase collection into a short showcase film that captures the character of the brand and makes the products feel vivid on social media.',
+      nl: 'De karakteristieke vazencollectie van Floreros vertalen naar een korte showcasefilm die het merkgevoel vangt en de producten levendig presenteert op social media.',
+    },
+    solution: {
+      en: 'The visual world was generated with Midjourney and Nano Banana 2, then brought to life in Kling 3.0—turning a chance local-market meeting into a polished digital brand collaboration.',
+      nl: 'De visuele wereld werd gecreëerd met Midjourney en Nano Banana 2 en tot leven gebracht in Kling 3.0—waarmee een toevallige ontmoeting op de lokale markt uitgroeide tot een verzorgde digitale merksamenwerking.',
+    },
+    techStack: ['VISUALS: MIDJOURNEY', 'REFINEMENT: NANO BANANA 2', 'ANIMATION: KLING 3.0', 'DELIVERY: SOCIAL FILM'],
+  },
+  {
+    id: 'roots-routes', title: 'Roots & Routes', year: '2026',
+    subtitle: { en: 'CAFÉ BRAND EXPERIENCE', nl: 'CAFÉ MERKBELEVING' },
+    tags: { en: 'AI BRAND CAMPAIGN', nl: 'AI-MERKCAMPAGNE' },
+    category: { en: 'Hospitality', nl: 'Hospitality' },
+    image: '/projects/roots-routes.png', video: '/projects/roots-routes.mp4',
+    videos: ['/projects/roots-routes.mp4', '/projects/roots-routes-02.mp4', '/projects/roots-routes-03.mp4'],
+    images: ['/projects/roots-routes.png'],
+    challenge: {
+      en: 'Roots & Routes Café needed an inviting online atmosphere that expressed its distinctive identity, without the cost and limitations of a conventional location shoot.',
+      nl: 'Roots & Routes Café had een uitnodigende online sfeer nodig die de eigen identiteit voelbaar maakte, zonder de kosten en beperkingen van een traditionele locatieshoot.',
+    },
+    solution: {
+      en: 'A bespoke visual campaign was built entirely digitally. Midjourney imagery was refined with Nano Banana Pro and animated in Kling AI, creating an immersive sensory journey without a camera crew or a day on location.',
+      nl: 'Een volledig digitale campagne werd ontwikkeld. Midjourney-beelden werden verfijnd met Nano Banana Pro en geanimeerd in Kling AI, voor een meeslepende zintuiglijke reis zonder cameraploeg of draaidag op locatie.',
+    },
+    techStack: ['VISUAL DIRECTION: MIDJOURNEY', 'REFINEMENT: NANO BANANA PRO', 'ANIMATION: KLING AI', 'PRODUCTION: FULLY DIGITAL'],
+  },
+  {
+    id: 'pontiac-firebird', title: 'Pontiac Firebird Trans Am', year: '2026',
+    subtitle: { en: 'AUTOMOTIVE SOCIAL FILM', nl: 'AUTOMOTIVE SOCIAL FILM' },
+    tags: { en: 'AI AUTOMOTIVE DIRECTION', nl: 'AI-AUTOMOTIVE REGIE' },
+    category: { en: 'Automotive', nl: 'Automotive' },
+    image: '/projects/pontiac.jpg', video: '/projects/pontiac.mp4',
+    videos: ['/projects/pontiac.mp4', '/projects/pontiac-02.mp4', '/projects/pontiac-03.mp4'],
+    images: ['/projects/pontiac.jpg', '/projects/pontiac-02.jpg', '/projects/pontiac-03.jpg'],
+    challenge: {
+      en: 'Present an iconic black Pontiac Firebird Trans Am with the drama and mythology of a cinematic car commercial across social-first formats.',
+      nl: 'Een iconische zwarte Pontiac Firebird Trans Am presenteren met de dramatiek en mythe van een cinematografische autoreclame, geschikt voor social-first formaten.',
+    },
+    solution: {
+      en: 'Atmospheric automotive shots, driving perspectives, and detailed close-ups were developed into a focused social film that treats the classic car as a living legend.',
+      nl: 'Sfeervolle autoshots, rijperspectieven en detailbeelden werden samengebracht in een krachtige social film die de klassieker als een levende legende neerzet.',
+    },
+    techStack: ['AI-GENERATED VISUALS', 'CINEMATIC MOTION', 'EDIT & SOUND DESIGN', 'DELIVERY: SOCIAL + 4K'],
+  },
+  {
+    id: 'tendenz', title: 'TendenZ Wonen', year: '2026',
+    subtitle: { en: 'FREEDOM SOFA CAMPAIGN', nl: 'FREEDOM BANKSTELCAMPAGNE' },
+    tags: { en: 'PRODUCT CAMPAIGN', nl: 'PRODUCTCAMPAGNE' },
+    category: { en: 'Interiors', nl: 'Interieur' },
+    image: '/projects/tendenz.jpg', video: '/projects/tendenz.mp4',
+    videos: ['/projects/tendenz.mp4', '/projects/tendenz-02.mp4', '/projects/tendenz-03.mp4'],
+    images: ['/projects/tendenz.jpg', '/projects/tendenz-02.jpg', '/projects/tendenz-03.jpg'],
+    challenge: {
+      en: 'Showcase the Freedom sofa as a premium Dutch living product while keeping the visual language warm, aspirational, and centred on comfort.',
+      nl: 'Het Freedom-bankstel presenteren als een hoogwaardig Nederlands woonproduct, met een warme, ambitieuze beeldtaal waarin comfort centraal staat.',
+    },
+    solution: {
+      en: 'Product photography and generated motion studies were shaped into a polished furniture film, using measured camera movement and changing environments to elevate the sofa’s design.',
+      nl: 'Productfotografie en gegenereerde motion-studies werden verwerkt tot een verzorgde meubelfilm, met beheerste camerabewegingen en wisselende omgevingen die het ontwerp van de bank versterken.',
+    },
+    techStack: ['PRODUCT PHOTOGRAPHY', 'AI ENVIRONMENT GENERATION', 'MOTION DESIGN', 'EDIT & MUSIC'],
+  },
+  {
+    id: 'montagna-doro', title: 'Montagna d’Oro', year: '2026',
+    subtitle: { en: 'CLASSIC AUTOMOTIVE CONTENT', nl: 'KLASSIEKE AUTOMOTIVE CONTENT' },
+    tags: { en: 'AUTOMOTIVE VISUALS', nl: 'AUTOMOTIVE BEELD' },
+    category: { en: 'Automotive', nl: 'Automotive' },
+    image: '/projects/montagna.jpg', video: '/projects/montagna.mp4',
+    videos: ['/projects/montagna.mp4', '/projects/montagna-02.mp4', '/projects/montagna-03.mp4'],
+    images: ['/projects/montagna.jpg', '/projects/montagna-02.jpg', '/projects/montagna-03.jpg'],
+    challenge: {
+      en: 'Give rare Italian collector cars a visual presentation that communicates their design details, heritage, and showroom character in a contemporary format.',
+      nl: 'Zeldzame Italiaanse verzamelauto’s een visuele presentatie geven die hun ontwerpdetails, erfgoed en showroomkarakter in een eigentijds formaat overbrengt.',
+    },
+    solution: {
+      en: 'Original vehicle photography was extended into cinematic motion content, creating elegant digital assets that preserve the authenticity of each classic while adding atmosphere and movement.',
+      nl: 'Originele autofotografie werd uitgebreid tot cinematografische motion-content, met elegante digitale assets die de authenticiteit van elke klassieker bewaren en tegelijk sfeer en beweging toevoegen.',
+    },
+    techStack: ['ORIGINAL AUTOMOTIVE PHOTOGRAPHY', 'AI-ASSISTED MOTION', 'MULTILINGUAL CONTENT', 'DIGITAL DELIVERY'],
   },
 ]
 

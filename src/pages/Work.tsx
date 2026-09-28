@@ -30,13 +30,25 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
     >
       <Link to={`/work/details/${project.id}`} className="block">
         <div style={{ height: '280px', overflow: 'hidden', position: 'relative' }}>
-          <motion.img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover"
-            animate={{ scale: hovered ? 1.07 : 1 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          />
+          {project.video ? (
+            <motion.video
+              src={project.video}
+              poster={project.image}
+              aria-label={`${project.title} project film`}
+              className="w-full h-full object-cover"
+              autoPlay muted loop playsInline preload="metadata"
+              animate={{ scale: hovered ? 1.07 : 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            />
+          ) : (
+            <motion.img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover"
+              animate={{ scale: hovered ? 1.07 : 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            />
+          )}
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 40%, rgba(13,13,13,0.8) 100%)' }} />
 
           {/* Hover overlay */}
